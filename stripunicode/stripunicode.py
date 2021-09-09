@@ -17,6 +17,9 @@ def stripunicode(
         val = ord(char)
         if val in range(9, 14) or val in range(32, 127):
             retval += char
+        elif val in [0x2013, 0x2014]:
+            # en-dash | em-dash -> hyphen
+            retval += "-"
         elif val in range(0x0080, 0x02FF + 1) or val in range(0x1D00, 0x1EFF + 1):
             # Latin-1 Supplement, Latin Extended-A, Latin Extended B, IPA Extensions, Spacing Modifier Letters
             # Phonetic Extensions, Phonetic Extensions Supplement, Latin Extended Additional

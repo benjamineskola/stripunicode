@@ -36,3 +36,8 @@ def test_digraph2():
     assert stripunicode("Ǳ") == "DZ"
     assert stripunicode("ǲ") == "Dz"
     assert stripunicode("ǳ") == "dz"
+
+
+def test_dashes():
+    assert stripunicode("–") == "-"
+    assert stripunicode("—") == "-"
