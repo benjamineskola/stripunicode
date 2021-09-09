@@ -41,3 +41,8 @@ def test_digraph2():
 def test_dashes():
     assert stripunicode("–") == "-"
     assert stripunicode("—") == "-"
+
+
+def test_icelandic():
+    assert stripunicode("Ðð") == "Dd"
+    assert stripunicode("Þþ") == "THth"

@@ -17,6 +17,18 @@ def stripunicode(
         val = ord(char)
         if val in range(9, 14) or val in range(32, 127):
             retval += char
+        elif val == 0xD0:
+            # uppercase eth
+            retval += "D"
+        elif val == 0xDE:
+            # uppercase thorn
+            retval += "TH"
+        elif val == 0xF0:
+            # lowercase eth
+            retval += "d"
+        elif val == 0xFE:
+            # lowercase thorn
+            retval += "th"
         elif val in [0x2013, 0x2014]:
             # en-dash | em-dash -> hyphen
             retval += "-"
