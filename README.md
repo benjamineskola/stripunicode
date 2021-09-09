@@ -7,7 +7,7 @@ Remove diacritics in Unicode text.
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install stripunicode.
 
 ```bash
-pip install git+https://gitlab.com/benjamineskola/stripunicode#egg=stripunicode
+pip install git+https://github.com/benjamineskola/stripunicode#egg=stripunicode
 ```
 
 ## Usage
